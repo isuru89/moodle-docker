@@ -14,3 +14,7 @@ services:
       MYSQL_USER: moodle
       MYSQL_PASSWORD: "m@0dl3ing"
       MYSQL_DATABASE: moodle
+    volumes:
+      - "${MYSQL_DB_VOLUME}:/var/lib/mysql"
+    ports:
+      - 3306:3306
